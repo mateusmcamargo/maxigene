@@ -30,8 +30,8 @@ root.render(
     <FormSection title='dados da matriz'>
       <SelectBlock labelValue='raça da matriz'     options={['raça01', 'raça02', 'raça03', 'raça04']} id='calf-breed'/>
       <SelectBlock labelValue='gênero da matriz'   options={['monodose']} id='calf-gender'/>
-      <InputBlock  labelValue='peso da matriz'     inputType='number'     id='calf-weight'/>
       <InputBlock  labelValue='data de nascimento' inputType='date'       id='calf-date'/>
+      <InputBlock  labelValue='peso da matriz'     inputType='number'     id='calf-weight'/>
     </FormSection>
 
     <FormSection title='finalizar'>
