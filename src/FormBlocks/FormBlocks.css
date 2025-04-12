@@ -80,6 +80,7 @@ div.title-block h1 {
 form {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 90vw;
   margin: 0 auto;
 }
@@ -104,7 +105,7 @@ form section div.block-box input, form section div.block-box select, form sectio
   width: 30rem;
   padding: 0 0.8rem;
   border-radius: 0.4rem;
-  color: #444;
+  color: #222;
   font-size: 1.4rem;
   font-weight: 500;
   background-color: white;
@@ -179,10 +180,7 @@ form section div.block-box button[type=submit]:hover {
     color: #222;
   }
   form {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
   }
   form section {
@@ -191,80 +189,10 @@ form section div.block-box button[type=submit]:hover {
   form section div.block-box {
     padding: 1rem 2rem;
   }
-  form section div.block-box label {
-    align-self: flex-start;
-    margin: 0 0 0.8rem 0;
-    color: #444;
-    font-size: 1.6rem;
-    font-weight: 500;
+  form section div.block-box:last-of-type {
+    padding: 0, 2rem;
   }
-  form section div.block-box input, form section div.block-box select, form section div.block-box textarea {
-    height: 3.6rem;
-    width: 30rem;
-    padding: 0 0.8rem;
-    border-radius: 0.4rem;
-    color: #444;
-    font-size: 1.4rem;
-    font-weight: 500;
-    background-color: white;
-    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
-    transition: none;
-  }
-  form section div.block-box input:focus, form section div.block-box select:focus, form section div.block-box textarea:focus {
-    outline: #5c5c5c 2px solid;
-  }
-  form section div.block-box input::-moz-placeholder, form section div.block-box select::-moz-placeholder, form section div.block-box textarea::-moz-placeholder {
-    color: #9c9c9c;
-  }
-  form section div.block-box input::placeholder, form section div.block-box select::placeholder, form section div.block-box textarea::placeholder {
-    color: #9c9c9c;
-  }
-  form section div.block-box input[type=checkbox], form section div.block-box select[type=checkbox], form section div.block-box textarea[type=checkbox] {
-    height: 1.6rem;
-    width: 1.6rem;
-    outline: none;
-  }
-  form section div.block-box input[type=submit], form section div.block-box select[type=submit], form section div.block-box textarea[type=submit] {
-    margin-top: 2.4rem;
-    background-color: #ff4e4e;
-  }
-  form section div.block-box input[type=submit]:hover, form section div.block-box select[type=submit]:hover, form section div.block-box textarea[type=submit]:hover {
-    background-color: #ff5e5e;
-    cursor: pointer;
-  }
-  form section div.block-box textarea {
-    resize: none;
-    height: 12.4rem;
-    padding: 0.8rem 0.8rem;
-  }
-  form section div.block-box button {
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 0.4rem;
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 500;
-    background-color: #5c5c5c;
-    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
-    transition: none;
-  }
-  form section div.block-box button:hover {
-    background-color: #565555;
-    cursor: pointer;
-  }
-  form section div.block-box button:focus {
-    outline: #5c5c5c 2px solid;
-  }
-  form section div.block-box button::-moz-placeholder {
-    color: #9c9c9c;
-  }
-  form section div.block-box button::placeholder {
-    color: #9c9c9c;
-  }
-  form section div.block-box button[type=submit] {
-    background-color: #ff4e4e;
-  }
-  form section div.block-box button[type=submit]:hover {
-    background-color: #ff5e5e;
+  form section div.block-box input[type=submit] {
+    margin: 0;
   }
 }/*# sourceMappingURL=FormBlocks.css.map */

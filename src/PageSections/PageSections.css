@@ -86,7 +86,7 @@ footer p {
 @media screen and (max-width: 600px) {
   footer {
     gap: 3rem;
-    position: relative;
+    position: initial;
     height: 6rem;
   }
   footer p {
