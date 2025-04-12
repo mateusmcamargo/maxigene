@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/maxigene/static/css/main.5e424277.css",
-    "main.js": "/maxigene/static/js/main.595ea4c8.js",
+    "main.js": "/maxigene/static/js/main.144e211f.js",
     "static/js/453.a3663bd7.chunk.js": "/maxigene/static/js/453.a3663bd7.chunk.js",
     "index.html": "/maxigene/index.html",
     "main.5e424277.css.map": "/maxigene/static/css/main.5e424277.css.map",
-    "main.595ea4c8.js.map": "/maxigene/static/js/main.595ea4c8.js.map",
+    "main.144e211f.js.map": "/maxigene/static/js/main.144e211f.js.map",
     "453.a3663bd7.chunk.js.map": "/maxigene/static/js/453.a3663bd7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e424277.css",
-    "static/js/main.595ea4c8.js"
+    "static/js/main.144e211f.js"
   ]
 }
