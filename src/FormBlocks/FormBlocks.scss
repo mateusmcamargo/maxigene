@@ -49,7 +49,7 @@ form {
     section {
 
         h2 {
-            
+            text-align: left;
             padding: $block-box-padding;
 
             color: $color-darker;
@@ -165,10 +165,15 @@ form {
     form {
         flex-direction: column;
     
-        width: 100vw;
+        width: 90vw;
     
+        
         section {
-    
+            
+            h2 {
+                text-align: center;
+            }
+
             margin-bottom: 2rem;
 
             div.block-box {
@@ -179,7 +184,10 @@ form {
                     padding: 0, nth($block-box-padding, 2);
                 }
 
-                input {
+                input, select, textarea {
+                    
+                    width: 100%;
+
                     &[type="submit"] {
                         margin-top: 0;
                         margin-bottom: calc(nth($label-margin, 3) + $fontsize-label);

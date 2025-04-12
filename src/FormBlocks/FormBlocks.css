@@ -84,6 +84,7 @@ form {
   margin: 0 auto;
 }
 form section h2 {
+  text-align: left;
   padding: 1rem 2rem;
   color: #222;
 }
@@ -174,10 +175,13 @@ form section div.block-box button::placeholder {
   }
   form {
     flex-direction: column;
-    width: 100vw;
+    width: 90vw;
   }
   form section {
     margin-bottom: 2rem;
+  }
+  form section h2 {
+    text-align: center;
   }
   form section div.block-box {
     padding: 1rem 2rem;
@@ -185,7 +189,10 @@ form section div.block-box button::placeholder {
   form section div.block-box:last-of-type {
     padding: 0, 2rem;
   }
-  form section div.block-box input[type=submit] {
+  form section div.block-box input, form section div.block-box select, form section div.block-box textarea {
+    width: 100%;
+  }
+  form section div.block-box input[type=submit], form section div.block-box select[type=submit], form section div.block-box textarea[type=submit] {
     margin-top: 0;
     margin-bottom: 2.4rem;
   }
