@@ -20,7 +20,7 @@
 }
 
 h1 {
-  font-size: 4.2rem;
+  font-size: 4.8rem;
   font-weight: 500;
 }
 
@@ -66,6 +66,17 @@ code order {
 }
 
 */
+div.title-block {
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  background-color: #ff4e4e;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.2);
+}
+div.title-block h1 {
+  text-align: center;
+  color: #222;
+}
+
 form {
   display: flex;
   justify-content: center;
@@ -74,6 +85,7 @@ form {
 }
 form section h2 {
   padding: 1rem 2rem;
+  color: #222;
 }
 form section div.block-box {
   display: flex;
@@ -158,6 +170,14 @@ form section div.block-box button[type=submit]:hover {
 }
 
 @media screen and (max-width: 600px) {
+  div.title-block {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+  div.title-block h1 {
+    text-align: center;
+    color: #222;
+  }
   form {
     display: flex;
     flex-direction: column;

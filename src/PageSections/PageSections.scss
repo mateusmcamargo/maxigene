@@ -1,0 +1,37 @@
+@import '../master';
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+
+    position: fixed;
+    bottom: 0;
+
+    height: 6.4rem;
+    width: 100vw;
+
+    background-color: $color-primary;
+
+    p {
+
+        color: $color-darker;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    footer {
+        gap: 3rem;
+        position: relative;
+        height: 6rem;
+    
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+}

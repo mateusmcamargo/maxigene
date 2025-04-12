@@ -23,6 +23,20 @@ $checkbox-size: 1.6rem;
 // button
 $button-size: 3.2rem;
 
+div.title-block {
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+
+    background-color: $color-primary;
+    box-shadow: 0 0 .8rem $color-shadow;
+    
+    h1 {
+        text-align: center;
+
+        color: $color-darker;
+    }
+}
+
 form {
 
     display: flex;
@@ -35,7 +49,10 @@ form {
     section {
 
         h2 {
+            
             padding: $block-box-padding;
+
+            color: $color-darker;
         }
 
         div.block-box {
@@ -138,6 +155,20 @@ form {
 }
 
 @media screen and (max-width: 600px) {
+    
+    div.title-block {
+        
+        padding: 1rem 0;
+        
+        margin-bottom: 1rem;
+    
+        h1 {
+            text-align: center;
+    
+            color: $color-darker;
+        }
+    }
+
     form {
 
         display: flex;

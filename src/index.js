@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import {FormWrapper, FormSection, TextareaBlock, InputBlock, SelectBlock} from './FormBlocks/FormBlocks';
+import {FormWrapper, TitleBlock, FormSection, TextareaBlock, InputBlock, SelectBlock} from './FormBlocks/FormBlocks';
+import {Footer} from './PageSections/PageSections';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
+  <TitleBlock title='novo animal'/>
   <FormWrapper>
     <FormSection title='dados iniciais'>
       <InputBlock  labelValue='data'        inputType='date' id='date'/>
@@ -38,6 +40,8 @@ root.render(
     </FormSection>
 
   </FormWrapper>
+
+  <Footer trademark='MaxiGene' crmv='59035SP / 8570MS' address='Três Lagoas, MS'/>
 
   </React.StrictMode>
 );

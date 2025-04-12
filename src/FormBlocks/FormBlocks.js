@@ -9,6 +9,14 @@ function FormWrapper({children}) {
   );
 }
 
+function TitleBlock({title}) {
+  return (
+    <div className='title-block'>
+      <h1>{title}</h1>
+    </div>
+  )
+}
+
 function FormSection({title, children}) {
   return (
     <section>
@@ -96,4 +104,4 @@ function SelectBlock({labelValue, options, id}) {
   );
 }
 
-export {FormWrapper, FormSection, TextareaBlock, InputBlock, SelectBlock};
+export {FormWrapper, TitleBlock, FormSection, TextareaBlock, InputBlock, SelectBlock};
