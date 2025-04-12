@@ -143,13 +143,6 @@ form {
                 &::placeholder {
                     color: $color-input-placeholder;
                 }
-                &[type="submit"] {
-                    background-color: $color-primary;
-                    
-                    &:hover {
-                        background-color: $color-primary-hover;
-                    }
-                }
             }
         }
     }
@@ -189,7 +182,8 @@ form {
 
                 input {
                     &[type="submit"] {
-                        margin: 0;
+                        margin-top: 0;
+                        margin-bottom: calc(nth($label-margin, 3) + $fontsize-label);
                     }
                 }
             }

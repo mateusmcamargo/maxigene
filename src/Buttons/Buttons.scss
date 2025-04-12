@@ -1,0 +1,28 @@
+@import '../master';
+
+$button-size: 3.2rem;
+
+button.button-floaty {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+
+    width:  $button-size;
+    height: $button-size;
+
+    border-radius: calc($border-radius * 2.5);
+
+    background-color: $color-light;
+    box-shadow: 0 0 .4rem $color-shadow;
+    
+    p {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $color-darker;
+    }
+}

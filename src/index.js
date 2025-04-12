@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
+import {ButtonReturn} from './Buttons/Buttons';
 import {FormWrapper, TitleBlock, FormSection, TextareaBlock, InputBlock, SelectBlock} from './FormBlocks/FormBlocks';
 import {Footer} from './PageSections/PageSections';
 
@@ -19,17 +20,17 @@ root.render(
     </FormSection>
 
     <FormSection title='dados da mãe'>
-      <SelectBlock labelValue='dg'  options={['prenha', 'vazia']} id='dg'/>
-      <InputBlock  labelValue='ecc' inputType='number' id='ecc'/>
+      <SelectBlock labelValue='dg'               options={['prenha', 'vazia']} id='dg'/>
       <SelectBlock labelValue='tipo de implante' options={['monodose']} id='implant'/>
       <SelectBlock labelValue='nome do touro'    options={['touro01', 'touro02', 'touro03']} id='bull'/>
+      <InputBlock  labelValue='ecc'              inputType='number' id='ecc'/>
       <InputBlock  labelValue='partida'          inputType='number' id='exit'/>
     </FormSection>
 
     <FormSection title='dados da matriz'>
       <SelectBlock labelValue='raça da matriz'     options={['raça01', 'raça02', 'raça03', 'raça04']} id='calf-breed'/>
-      <InputBlock  labelValue='peso da matriz'     inputType='number'     id='calf-weight'/>
       <SelectBlock labelValue='gênero da matriz'   options={['monodose']} id='calf-gender'/>
+      <InputBlock  labelValue='peso da matriz'     inputType='number'     id='calf-weight'/>
       <InputBlock  labelValue='data de nascimento' inputType='date'       id='calf-date'/>
     </FormSection>
 

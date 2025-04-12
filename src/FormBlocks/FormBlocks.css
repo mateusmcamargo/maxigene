@@ -163,12 +163,6 @@ form section div.block-box button::-moz-placeholder {
 form section div.block-box button::placeholder {
   color: #9c9c9c;
 }
-form section div.block-box button[type=submit] {
-  background-color: #ff4e4e;
-}
-form section div.block-box button[type=submit]:hover {
-  background-color: #ff5e5e;
-}
 
 @media screen and (max-width: 600px) {
   div.title-block {
@@ -193,6 +187,7 @@ form section div.block-box button[type=submit]:hover {
     padding: 0, 2rem;
   }
   form section div.block-box input[type=submit] {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 2.4rem;
   }
 }/*# sourceMappingURL=FormBlocks.css.map */
