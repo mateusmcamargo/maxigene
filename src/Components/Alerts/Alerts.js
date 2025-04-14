@@ -2,22 +2,30 @@ import './Alerts.css';
 import { useState, useRef, useEffect } from 'react';
 import { FrostedWrapper } from '../../Shaders/FrostedWrapper';
 
-function AlertCodeReader({labelText, buttonText, inputType, inputPlaceholder, id, onClose}) {
+function AlertGeneric({labelText, onClose}) {
+    return (
+        <div className='alert-box'>
+            <button onClick={onClose}>{'X'}</button>
+            <div className='alert-content'>
+                <label>{labelText}</label>
+            </div>
+        </div>
+    );
+}
+
+function AlertInput({labelText, submitText, inputType, inputPlaceholder, id, onClose}) {
 
     const [inputValue, setInputValue] = useState('');
+
+    // focus on the input
     const inputRef = useRef(null);
-
-    // handles input changes
-    const handleChange = (e) => {
-        setInputValue(e.target.value);
-    };
-
     useEffect(() => {
         inputRef.current?.focus();
 
         const handleKeyDown = (e) => {
             if (e.key === 'Enter') {
-              onClose();
+                // TODO: backend
+                onClose();
             }
         }
 
@@ -25,8 +33,14 @@ function AlertCodeReader({labelText, buttonText, inputType, inputPlaceholder, id
 
         return () => {
             window.removeEventListener('keydown', handleKeyDown); // cleanup
-          };
+        };
     }, []);
+
+    // handles input changes
+    const handleChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
 
 
     // generates a unique id by concatenating the id parameter with the element name
@@ -50,33 +64,50 @@ function AlertCodeReader({labelText, buttonText, inputType, inputPlaceholder, id
                     id={submitId}
                     type='submit'
                     onClick={onClose}
-                    value={buttonText}
+                    value={submitText}
                 />
             </div>
         </div>
     );
 }
 
-function ShowAlert({children}) {
+function ShowAlert({children, alert, labelText, submitText, inputPlaceholder, inputType, id}) {
 
     const [show, setShow] = useState(true);
 
     const close = () => setShow(false);
 
-    return (
-        <> {show && (
-            <FrostedWrapper>
-                <AlertCodeReader
-                    labelText='leia ou digite o código'
-                    buttonText='cadastrar'
-                    inputPlaceholder='123456'   
-                    inputType='number'
-                    id='code'
-                    onClose={close}
-                />
-            </FrostedWrapper>
-        )}</>
-    );
+    switch(alert) {
+
+        case 1:
+            return (
+                <> {show && (
+                    <FrostedWrapper>
+                        <AlertInput
+                            labelText={labelText}
+                            submitText={submitText}
+                            inputPlaceholder={inputPlaceholder} 
+                            inputType={inputType}
+                            id={id}
+                            onClose={close}
+                        />
+                    </FrostedWrapper>
+                )}</>
+            );
+        break;
+
+        default:
+            return (
+                <> {show && (
+                    <FrostedWrapper>
+                        <AlertGeneric
+                            labelText='alerta não reconhecido'
+                            onClose={close}
+                        />
+                    </FrostedWrapper>
+                )}</>
+            );
+    }
 }
 
-export { AlertCodeReader, ShowAlert };
+export { AlertInput, AlertGeneric, ShowAlert };

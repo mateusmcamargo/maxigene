@@ -14,16 +14,10 @@ root.render(
 <React.StrictMode>
 
 <Reveal>
-<ButtonReturn/>
+    <ButtonReturn/>
 </Reveal>
 
-<ShowAlert/>
-
-{/* <FrostedWrapper>
-    <AlertCodeReader labelText='leia ou digite o código' inputPlaceholder='123456' buttonText='cadastrar' inputType='number'/>
-</FrostedWrapper> */}
-
-
+<ShowAlert alert={1} labelText='leia ou digite o código' buttonText='cadastrar' inputPlaceholder={123456} inputType='number' id='code-reader'/>
 
 <TitleBlock title='novo animal'/>
 
