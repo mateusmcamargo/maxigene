@@ -1,0 +1,42 @@
+@import '../../master';
+
+$alert-width:   35rem;
+$alert-height:  20rem;
+$alert-transx:  calc($alert-width/2);
+$alert-transy:  calc($alert-height/2);
+$button-transx: calc($alert-transx - $button-size);
+$button-transy: calc($alert-transy - $button-size);
+
+div.alert-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    left: 50vw;
+    top:  50vh;
+
+    transform: translate(-$alert-transx, -$alert-transy);
+
+    width:  $alert-width;
+    height: $alert-height;
+
+    background-color: white;
+    border-radius: $border-radius;
+    box-shadow: 0 0 .4rem $color-shadow;
+
+    button {
+        position: absolute;
+        transform: translate($button-transx, -$button-transy);
+    }
+
+    div.alert-content {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            align-self: center;
+            padding-bottom: 1rem;
+        }
+    }
+}

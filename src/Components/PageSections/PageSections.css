@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+  border: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+:root {
+  font-size: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+label {
+  align-self: flex-start;
+  margin: 0 0 0.8rem 0;
+  color: #444;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+input, select, textarea {
+  height: 3.6rem;
+  width: 30rem;
+  padding: 0 0.8rem;
+  border-radius: 0.4rem;
+  color: #222;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: white;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
+}
+input:focus, select:focus, textarea:focus {
+  outline: #5c5c5c 2px solid;
+}
+input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
+  color: #9c9c9c;
+}
+input::placeholder, select::placeholder, textarea::placeholder {
+  color: #9c9c9c;
+}
+input[type=checkbox], select[type=checkbox], textarea[type=checkbox] {
+  height: 1.6rem;
+  width: 1.6rem;
+  outline: none;
+}
+input[type=submit], select[type=submit], textarea[type=submit] {
+  margin-top: 2.4rem;
+  background-color: #ff4e4e;
+}
+input[type=submit]:hover, select[type=submit]:hover, textarea[type=submit]:hover {
+  background-color: #ff5e5e;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+  padding: 0.8rem 0.8rem;
+}
+
+button {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: #5c5c5c;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
+}
+button:hover {
+  background-color: #565555;
+  cursor: pointer;
+}
+button:focus {
+  outline: #5c5c5c 2px solid;
+}
+button::-moz-placeholder {
+  color: #9c9c9c;
+}
+button::placeholder {
+  color: #9c9c9c;
+}
+
+/*
+code order {
+
+    display and its properties;
+
+    size;
+
+    padding;
+    margin;
+    outline, border and border-radius;
+
+    fonts and its properties [font, color, font-size, font-weight];
+
+    background-color;
+    filters and shadow;
+
+    transition and animations;
+}
+*/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  position: fixed;
+  bottom: 0;
+  height: 6.4rem;
+  width: 100vw;
+  background-color: #ff4e4e;
+}
+footer p {
+  color: #222;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    gap: 3rem;
+    height: 4rem;
+  }
+  footer p {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=PageSections.css.map */

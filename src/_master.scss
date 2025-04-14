@@ -1,4 +1,4 @@
-*{margin:0;padding:0;text-decoration:none;color:black;border:none;box-sizing:border-box; font-family:Arial, Helvetica, sans-serif; transition: ease-in-out .2s;font-family: "Poppins", sans-serif;font-style: normal;}
+*{margin:0;padding:0;text-decoration:none;color:black;border:none;box-sizing:border-box; font-family:Arial, Helvetica, sans-serif; font-family: "Poppins", sans-serif;font-style: normal;}
 :root{font-size: 10px;}
 .hidden{display: none;}
 
@@ -15,6 +15,23 @@ $color-shadow:          rgba(0, 0, 0, 0.200);
 
 $color-input-background:  white;
 $color-input-placeholder: #9c9c9c;
+
+// label
+$label-margin: 0 0 .8rem 0;
+
+// input
+$input-padding: .8rem;
+$input-height: 3.6rem;
+$input-width: 30rem;
+
+// textarea
+$textarea-height: calc($input-height*4);
+
+// checkbox
+$checkbox-size: 1.6rem;
+
+// button
+$button-size: 3.2rem;
 
 // borders
 $border-radius: .4rem;
@@ -42,9 +59,85 @@ h3{font-size: $fontsize-h3; font-weight: $fontweight-h3;}
 h4{font-size: $fontsize-h4; font-weight: $fontweight-h4;}
 h5{font-size: $fontsize-h5; font-weight: $fontweight-h5;}
 
+label {
+    align-self:flex-start;
+    
+    margin: $label-margin;
+    
+    color: $color-dark;
+    font-size: $fontsize-label;
+    font-weight: $fontweight-label;
+}
+
+input, select, textarea {
+    height: $input-height;
+    width:  $input-width;
+    
+    padding: 0 $input-padding;
+    border-radius: $border-radius;
+    
+    color: $color-darker;
+    font-size: $fontsize-input;
+    font-weight: $fontweight-input;
+    
+    background-color: $color-input-background;
+    box-shadow: 0 0 .4rem $color-shadow;
+
+    &:focus {
+        outline: $color-secondary 2px solid;
+    }
+    &::placeholder {
+        color: $color-input-placeholder;
+    }
+    &[type="checkbox"] {
+        height: $checkbox-size;
+        width:  $checkbox-size;
+        
+        outline: none;
+    }
+    &[type="submit"] {
+        margin-top: calc(nth($label-margin, 3) + $fontsize-label);
+
+        background-color: $color-primary;
+        
+        &:hover {
+            background-color: $color-primary-hover;
+            cursor: pointer;
+        }
+    }
+}
+
+textarea {
+    resize: none;
+    padding: .8rem $input-padding
+}
+
+button {
+    width:  $button-size;
+    height: $button-size;
+    
+    border-radius: $border-radius;
+    
+    color: white;
+    font-size: $fontsize-input;
+    font-weight: $fontweight-input;
+    
+    background-color: $color-secondary;
+    box-shadow: 0 0 .4rem $color-shadow;
+
+    &:hover {
+        background-color: $color-secondary-hover;
+        cursor: pointer;
+    }
+    &:focus {
+        outline: $color-secondary 2px solid;
+    }
+    &::placeholder {
+        color: $color-input-placeholder;
+    }
+}
 
 /*
-
 code order {
 
     display and its properties;
@@ -61,7 +154,5 @@ code order {
     filters and shadow;
 
     transition and animations;
-
 }
-
 */

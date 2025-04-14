@@ -1,0 +1,13 @@
+.frosted-blur {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.frosted-content {
+  position: absolute;
+  z-index: 1;
+}/*# sourceMappingURL=FrostedWrapper.css.map */
