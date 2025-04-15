@@ -133,6 +133,17 @@ code order {
     transition and animations;
 }
 */
+div.title-block {
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  background-color: #ff4e4e;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.2);
+}
+div.title-block h1 {
+  text-align: center;
+  color: #222;
+}
+
 footer {
   display: flex;
   align-items: center;

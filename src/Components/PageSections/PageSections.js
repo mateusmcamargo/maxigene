@@ -1,5 +1,13 @@
 import './PageSections.css';
 
+function TitleBlock({title}) {
+    return (
+        <div className='title-block'>
+            <h1>{title}</h1>
+        </div>
+    )
+}
+
 function Footer({left, center, right}) {
     return (
         <footer>
@@ -10,4 +18,4 @@ function Footer({left, center, right}) {
     )
 }
 
-export {Footer};
+export { TitleBlock, Footer };

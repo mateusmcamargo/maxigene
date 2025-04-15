@@ -1,4 +1,18 @@
-@import '../master';
+@import '../../master';
+
+div.title-block {
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+
+    background-color: $color-primary;
+    box-shadow: 0 0 .8rem $color-shadow;
+    
+    h1 {
+        text-align: center;
+
+        color: $color-darker;
+    }
+}
 
 footer {
     display: flex;

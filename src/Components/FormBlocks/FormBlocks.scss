@@ -1,24 +1,10 @@
-@import '../master';
+@import '../../master';
 
 //form-section
 $form-section-padding: 1rem 2rem;
 
 // block-box
 $block-box-padding: 1rem 2rem;
-
-div.title-block {
-    margin-bottom: 2rem;
-    padding: 1rem 0;
-
-    background-color: $color-primary;
-    box-shadow: 0 0 .8rem $color-shadow;
-    
-    h1 {
-        text-align: center;
-
-        color: $color-darker;
-    }
-}
 
 form {
 
