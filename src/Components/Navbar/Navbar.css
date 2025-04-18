@@ -154,7 +154,7 @@ div.wrapper.flex.collum {
   main {
     width: 100vw;
     margin-left: 0;
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
   }
 }
 /*
@@ -220,7 +220,7 @@ section.navbar nav div.navbar-container a:hover i {
     position: fixed;
     bottom: 0;
     width: 100vw;
-    height: 10rem;
+    height: 7rem;
     background-color: white;
   }
   section.navbar nav {
@@ -246,5 +246,8 @@ section.navbar nav div.navbar-container a:hover i {
     padding-bottom: 4px;
     border-left: 0;
     border-bottom: 4px solid #ff4e4e;
+  }
+  section.navbar nav div.navbar-container a i {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=Navbar.css.map */

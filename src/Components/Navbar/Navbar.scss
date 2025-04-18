@@ -60,7 +60,7 @@ section.navbar {
         bottom: 0;
         
         width:  100vw;
-        height: 10rem;
+        height: $mobile-navbar-height;
         background-color: white;
         
         nav {
@@ -91,6 +91,10 @@ section.navbar {
                             border-left: 0;
                             border-bottom: 4px solid $color-primary;
                         }
+                    }
+
+                    i {
+                        font-size: 2rem;
                     }
                 }
             }

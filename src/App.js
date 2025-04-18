@@ -8,8 +8,8 @@ function App() {
         <>
             <Navbar/>
             <Routes>
-                <Route path='/farms'     element={<Farms/>}/>
-                <Route path='/newanimal' element={<NewAnimal/>}/>
+                <Route path='/maxigene/farms'     element={<Farms/>}/>
+                <Route path='/maxigene/newanimal' element={<NewAnimal/>}/>
             </Routes>
         </>
     );
