@@ -46,11 +46,11 @@ function AlertInput({labelText, submitText, inputType, inputPlaceholder, id, onC
     // generates a unique id by concatenating the id parameter with the element name
     const labelId  = 'label-' + id;
     const inputId  = 'input-' + id;
-    const submitId = 'input-' + id;
+    const submitId = 'submit-' + id;
 
     return (
         <div className='alert-box'>
-            <button onClick={onClose}>{'X'}</button>
+            <button onClick={onClose}><i class="fa-solid fa-xmark"></i></button>
             <div className='alert-content'>
                 <label>{labelText}</label>
                 <input

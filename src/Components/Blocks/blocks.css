@@ -176,33 +176,27 @@ code order {
     transition and animations;
 }
 */
-div.alert-box {
+div.div-fluctuating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem 4rem;
+  border-radius: 0.8rem;
+  background-color: white;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
+}
+div.div-fluctuating .top {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  left: 50vw;
-  top: 50vh;
-  transform: translate(-17.5rem, -10rem);
-  width: 35rem;
-  height: 20rem;
-  background-color: white;
-  border-radius: 0.4rem;
-  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
+  gap: 2rem;
 }
-div.alert-box button {
+div.div-fluctuating .top button {
   background-color: #ff4e4e;
-  position: absolute;
-  transform: translate(14.3rem, -6.8rem);
 }
-div.alert-box div.alert-content {
-  display: flex;
-  flex-direction: column;
-}
-div.alert-box div.alert-content label {
-  align-self: center;
-  padding-bottom: 1rem;
-}
-div.alert-box div.alert-content input[type=submit]#submit-code-reader {
-  margin-top: 2.4rem;
-}/*# sourceMappingURL=Alerts.css.map */
+div.div-fluctuating p {
+  align-self: flex-start;
+  color: #444;
+  font-size: 1.6rem;
+}/*# sourceMappingURL=blocks.css.map */

@@ -4,7 +4,7 @@
 
 // colors
 $color-primary:         #ff4e4e;
-$color-primary-hover:   #ff5e5e;
+$color-primary-hover:   #ff7b7b;
 $color-secondary:       #5c5c5c;
 $color-secondary-hover: #565555;
 $color-light:           #d0d0d0;
@@ -36,28 +36,40 @@ $button-size: 3.2rem;
 // borders
 $border-radius: .4rem;
 
+// navbar
+$desktop-navbar-width: 10rem;
+$mobile-navbar-height: 10rem;
+
 // font-size and font-weight
-$fontsize-h1: 4.8rem;
-$fontsize-h2: 3.6rem;
-$fontsize-h3: 2.2rem;
-$fontsize-h4: 1.6rem;
-$fontsize-h5: 1.6rem;
-$fontsize-label: 1.6rem;
-$fontsize-input: 1.4rem;
-$fontweight-h1: 500;
-$fontweight-h2: 500;
-$fontweight-h3: 500;
-$fontweight-h4: 500;
-$fontweight-h5: 500;
+$fontsize-h1:      4.8rem;
+$fontsize-h2:      3.6rem;
+$fontsize-h3:      2.2rem;
+$fontsize-h4:      1.6rem;
+$fontsize-h5:      1.6rem;
+$fontsize-p:       1.6rem;
+$fontsize-label:   1.6rem;
+$fontsize-input:   1.4rem;
+$fontweight-h1:    500;
+$fontweight-h2:    500;
+$fontweight-h3:    500;
+$fontweight-h4:    500;
+$fontweight-h5:    500;
+$fontweight-p:     500;
 $fontweight-label: 500;
 $fontweight-input: 500;
 
-// headers
+p, h1, h2, h3, h4, h5, i {
+    color: $color-darker;
+}
+
+// text
 h1{font-size: $fontsize-h1; font-weight: $fontweight-h1;}
 h2{font-size: $fontsize-h2; font-weight: $fontweight-h2;}
 h3{font-size: $fontsize-h3; font-weight: $fontweight-h3;}
 h4{font-size: $fontsize-h4; font-weight: $fontweight-h4;}
 h5{font-size: $fontsize-h5; font-weight: $fontweight-h5;}
+p {font-size: $fontsize-p;  font-weight: $fontweight-p;}
+//
 
 label {
     align-self:flex-start;
@@ -96,8 +108,6 @@ input, select, textarea {
         outline: none;
     }
     &[type="submit"] {
-        margin-top: calc(nth($label-margin, 3) + $fontsize-label);
-
         background-color: $color-primary;
         
         &:hover {
@@ -137,6 +147,48 @@ button {
     }
 }
 
+main {
+    width: calc(100vw - $desktop-navbar-width);
+    margin-left: $desktop-navbar-width;
+    margin-bottom: 0;
+}
+
+section {
+
+    &.section-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+}
+
+div {
+    &.wrapper {
+        width: 60%;
+        margin: 0 auto;
+
+        &.flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8rem;
+
+            &.collum {
+                flex-direction: column;
+            }
+        }
+    }
+}    
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 100vw;
+        margin-left: 0;
+        margin-bottom: $mobile-navbar-height;
+    }
+}
 /*
 code order {
 

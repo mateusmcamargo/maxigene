@@ -29,11 +29,23 @@ function FormNewAnimal() {
             <FormSection title='finalizar'>
                 <SelectBlock   labelValue='protocolo'   options={['protocolo01', 'protocolo02', 'protocolo03']} id='protocol'/>
                 <TextareaBlock labelValue='observações' textareaPlaceholder='escreva as observações aqui.'  id='observations'/>
-                <InputBlock    inputType='submit'       inputText='cadastrar animal' id='animal-submit'/>
+                <InputBlock inputType='submit' inputText='cadastrar animal' id='animal-submit'/>
             </FormSection>
     
         </FormWrapper>
     );
 }
 
-export { FormNewAnimal };
+function FormNewFarm() {
+    return (
+        <FormWrapper>
+            <FormSection title='nova fazenda'>
+                <InputBlock  labelValue='nome' inputType='text' id='new-farm-name' inputPlaceholder='nome da fazenda'/>
+                <InputBlock  inputType='submit' inputText='cadastrar fazenda' id='new-farm-submit'/>
+            </FormSection>
+    
+        </FormWrapper>
+    );
+}
+
+export { FormNewAnimal, FormNewFarm };

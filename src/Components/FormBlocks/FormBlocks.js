@@ -42,9 +42,9 @@ function InputBlock({labelValue, inputType, inputText, inputPlaceholder, id}) {
             />
         </div>
         );
-    }
+}
 
-    function TextareaBlock({labelValue, textareaPlaceholder, id}) {
+function TextareaBlock({labelValue, textareaPlaceholder, id}) {
     const [textareaValue, setTextareaValue] = useState('');
 
     // handles input changes

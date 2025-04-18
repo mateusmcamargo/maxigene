@@ -18,6 +18,10 @@
   display: none;
 }
 
+p, h1, h2, h3, h4, h5, i {
+  color: #222;
+}
+
 h1 {
   font-size: 4.8rem;
   font-weight: 500;
@@ -39,6 +43,11 @@ h4 {
 }
 
 h5 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+p {
   font-size: 1.6rem;
   font-weight: 500;
 }
@@ -77,11 +86,10 @@ input[type=checkbox], select[type=checkbox], textarea[type=checkbox] {
   outline: none;
 }
 input[type=submit], select[type=submit], textarea[type=submit] {
-  margin-top: 2.4rem;
   background-color: #ff4e4e;
 }
 input[type=submit]:hover, select[type=submit]:hover, textarea[type=submit]:hover {
-  background-color: #ff5e5e;
+  background-color: #ff7b7b;
   cursor: pointer;
 }
 
@@ -114,6 +122,41 @@ button::placeholder {
   color: #9c9c9c;
 }
 
+main {
+  width: calc(100vw - 10rem);
+  margin-left: 10rem;
+  margin-bottom: 0;
+}
+
+section.section-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+div.wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+div.wrapper.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+}
+div.wrapper.flex.collum {
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    width: 100vw;
+    margin-left: 0;
+    margin-bottom: 10rem;
+  }
+}
 /*
 code order {
 
@@ -136,8 +179,6 @@ code order {
 form {
   display: flex;
   justify-content: center;
-  width: 90vw;
-  margin: 0 auto;
 }
 form section h2 {
   text-align: left;
@@ -152,6 +193,9 @@ form section div.block-box {
 form section div.block-box textarea {
   height: 12.4rem;
 }
+form section div.block-box input[type=submit]#input-animal-submit {
+  margin-top: 2.4rem;
+}
 
 @media screen and (max-width: 600px) {
   div.title-block {
@@ -160,11 +204,11 @@ form section div.block-box textarea {
   }
   div.title-block h1 {
     text-align: center;
-    color: #222;
   }
   form {
     flex-direction: column;
     width: 90vw;
+    margin: 0 auto;
   }
   form section {
     margin-bottom: 2rem;
@@ -181,8 +225,8 @@ form section div.block-box textarea {
   form section div.block-box input, form section div.block-box select, form section div.block-box textarea {
     width: 100%;
   }
-  form section div.block-box input[type=submit], form section div.block-box select[type=submit], form section div.block-box textarea[type=submit] {
+  form section div.block-box input[type=submit]#input-animal-submit, form section div.block-box select[type=submit]#input-animal-submit, form section div.block-box textarea[type=submit]#input-animal-submit {
     margin-top: 0;
-    margin-bottom: 2.4rem;
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=FormBlocks.css.map */

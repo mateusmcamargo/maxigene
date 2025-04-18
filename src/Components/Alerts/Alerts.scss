@@ -26,6 +26,7 @@ div.alert-box {
     box-shadow: 0 0 .4rem $color-shadow;
 
     button {
+        background-color: $color-primary;
         position: absolute;
         transform: translate($button-transx, -$button-transy);
     }
@@ -37,6 +38,10 @@ div.alert-box {
         label {
             align-self: center;
             padding-bottom: 1rem;
+        }
+
+        input[type="submit"]#submit-code-reader {
+            margin-top: calc(nth($label-margin, 3) + $fontsize-label);
         }
     }
 }

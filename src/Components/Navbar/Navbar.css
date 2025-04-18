@@ -176,33 +176,75 @@ code order {
     transition and animations;
 }
 */
-div.alert-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+section.navbar {
   position: fixed;
-  left: 50vw;
-  top: 50vh;
-  transform: translate(-17.5rem, -10rem);
-  width: 35rem;
-  height: 20rem;
+  left: 0;
+  width: 10rem;
+  height: 100vh;
+  z-index: 2;
   background-color: white;
-  border-radius: 0.4rem;
-  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
 }
-div.alert-box button {
-  background-color: #ff4e4e;
-  position: absolute;
-  transform: translate(14.3rem, -6.8rem);
-}
-div.alert-box div.alert-content {
+section.navbar nav {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12rem;
+  padding: 4rem 0;
+  width: 100%;
+  height: 100%;
+  border-right: 4px #ff4e4e solid;
 }
-div.alert-box div.alert-content label {
-  align-self: center;
-  padding-bottom: 1rem;
+section.navbar nav div.navbar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
 }
-div.alert-box div.alert-content input[type=submit]#submit-code-reader {
-  margin-top: 2.4rem;
-}/*# sourceMappingURL=Alerts.css.map */
+section.navbar nav div.navbar-container a i {
+  font-size: 2.6rem;
+  transition: ease 0.1s;
+  border-left: 0px solid #ff4e4e;
+}
+section.navbar nav div.navbar-container a.active i {
+  padding-left: 4px;
+  border-left: 4px solid #ff4e4e;
+  color: #ff4e4e;
+}
+section.navbar nav div.navbar-container a:hover i {
+  color: #ff7b7b;
+}
+
+@media screen and (max-width: 600px) {
+  section.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 10rem;
+    background-color: white;
+  }
+  section.navbar nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 4px #ff4e4e solid;
+    border-right: 0;
+  }
+  section.navbar nav div.navbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+  section.navbar nav div.navbar-container a.active i {
+    padding-left: 0;
+    padding-bottom: 4px;
+    border-left: 0;
+    border-bottom: 4px solid #ff4e4e;
+  }
+}/*# sourceMappingURL=Navbar.css.map */

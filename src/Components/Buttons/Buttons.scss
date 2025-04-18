@@ -1,4 +1,4 @@
-@import '../master';
+@import '../../master';
 
 $button-size: 3.2rem;
 
@@ -23,6 +23,5 @@ button.button-floaty {
     p {
         font-size: 2.4rem;
         font-weight: 700;
-        color: $color-darker;
     }
 }
