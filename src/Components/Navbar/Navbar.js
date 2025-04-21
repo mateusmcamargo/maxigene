@@ -6,7 +6,7 @@ function Navbar() {
         <section className="navbar">
             <nav>
                 <div className='navbar-container user'>
-                    <NavLink to='/maxigene/user' className={({isActive}) => isActive ? 'active' : ''}>
+                    <NavLink to='/maxigene/signup' className={({isActive}) => isActive ? 'active' : ''}>
                         <i class="fa-solid fa-user"></i>
                     </NavLink>
                 </div>
@@ -15,13 +15,13 @@ function Navbar() {
                     <NavLink to='/maxigene/farms' className={({isActive}) => isActive ? 'active' : ''}>
                         <i class="fa-solid fa-tractor"></i>
                     </NavLink>
-                    <NavLink to='/maxigene/newanimal' className={({isActive}) => isActive ? 'active' : ''}>
+                    <NavLink to='/maxigene/animals' className={({isActive}) => isActive ? 'active' : ''}>
                         <i class="fa-solid fa-cow"></i>
                     </NavLink>
                     <NavLink to='/maxigene/data' className={({isActive}) => isActive ? 'active' : ''}>
                         <i class="fa-solid fa-chart-pie"></i>
                     </NavLink>
-                    <NavLink to='/maxigene/config' className={({isActive}) => isActive ? 'active' : ''}>
+                    <NavLink to='/maxigene/settings' className={({isActive}) => isActive ? 'active' : ''}>
                         <i class="fa-solid fa-gear"></i>
                     </NavLink>
                 </div>

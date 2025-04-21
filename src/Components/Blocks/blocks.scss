@@ -1,33 +1,128 @@
 @import '../../master';
- 
-div.div-fluctuating {
+
+section.wrapper-flex {
+    display: flex;
+    flex-direction: column;
+
+    width: 95%;
+    height: 95%;
+    padding: $wrapper-flex-padding;
+
+    border-radius: $wrapper-flex-border-radius;
+    background-color: white;
+}
+
+section.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+
+    width: 100%;
+    height: 10%;
+    padding: $section-title-padding;
+
+    .title {
+        padding: 0 2rem;
+        border-left: 4px solid $color-primary;
+    }
+    
+    .icon {
+        width:  5rem;
+        height: 5rem;
+
+        i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            width:  100%;
+            height: 100%;
+            font-size: 3.6rem;
+            
+            border-radius: 50%;
+            background-color: $color-primary;
+        }
+    }
+
+    h1 {
+        font-size: 3.6rem;
+    }
+}
+
+section.section-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    
+    width: 100%;
+    height: 90%;
+    padding: $section-title-padding;
+}
+
+div.div-square {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: .4rem;
     
-    padding: 1.6rem 4rem;
-
-    border-radius: $border-radius*2;
+    width:  22rem;
+    height: 22rem;
+    
     background-color: white;
-    box-shadow: 0 0 .4rem $color-shadow;
+    border-radius: $border-radius*5;
+    border: 4px solid #E0E2E6;
+    border-bottom: 12px solid #E0E2E6;
 
-    .top {
+    i {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
 
-        button {
-            background-color: $color-primary;
+        height: 8rem;
+        width:  8rem;
+        font-size: 4rem;
+        color: $color-darker;
+        background-color: $color-primary;
+        border-radius: 50%;
+    }
+    
+    div.text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .4rem;
+    }
+
+    &.content {
+        .text {
+            
+            p {
+                color: $color-dark;
+            }
         }
-
     }
 
-
-    p {
-        align-self: flex-start;
-        color: $color-dark;
-        font-size: 1.6rem;
+    &.info {
+        border: 4px solid $color-primary;
+        border-bottom: 12px solid $color-primary;
+    
+        i {
+            color: $color-primary;
+            background-color: $color-primary-light;
+        }
+    
+        .text {
+            h3 {
+                color: $color-primary;
+            }
+            p {
+                color: $color-dark;
+            }
+        }
     }
+
 }

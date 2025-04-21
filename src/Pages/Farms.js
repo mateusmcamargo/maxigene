@@ -1,21 +1,16 @@
 import { TitleBlock }  from '../Components/PageSections/PageSections';
-import { FormNewFarm } from '../Components/Forms/Forms';
-import { FluctuatingDiv } from '../Components/Blocks/Blocks';
+import { DivContentSquare, DivInfoSquare, SectionContent, SectionTitle, WrapperFlex } from '../Components/Blocks/Blocks';
 
-function Farms() {
+export function Farms() {
     return (
         <main>
-            <TitleBlock title='propriedades'/>
-
-            <FormNewFarm/>
-
-            <section className='section-list'>
-                <FluctuatingDiv h3Text='fazenda01' pText='12 animais'/>
-                <FluctuatingDiv h3Text='fazenda02' pText='97 animais'/>
-                <FluctuatingDiv h3Text='fazenda03' pText='34 animais'/>
-            </section>
+            <WrapperFlex>
+                <SectionTitle title='propriedades'/>
+                <SectionContent>
+                    <DivContentSquare icon='tractor' h3Text='fazenda01' pText='14 animais'/>
+                    <DivInfoSquare    icon='add'     h3Text='adicionar' pText='nova fazenda'/>
+                </SectionContent>
+            </WrapperFlex>
         </main>
     );
 }
-
-export { Farms };

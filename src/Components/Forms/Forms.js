@@ -1,6 +1,39 @@
 import { FormWrapper, FormSection, InputBlock, SelectBlock, TextareaBlock } from '../FormBlocks/FormBlocks';
 
-function FormNewAnimal() {
+export function FormSignUp() {
+
+    return (
+        <FormWrapper>
+            <FormSection title='criar conta'>
+                <InputBlock
+                    labelValue='email'
+                    inputPlaceholder='seuemail@dominio.com'
+                    inputType='email'
+                    id='login-email'
+                    />
+                <InputBlock
+                    labelValue='senha'
+                    inputPlaceholder='digite a senha'
+                    inputType='password'
+                    id='login-password'
+                    />
+                <InputBlock
+                    labelValue='senha'
+                    inputPlaceholder='repita a senha'
+                    inputType='password'
+                    id='login-password-repeat'
+                    />
+                <InputBlock
+                    inputText='entrar'
+                    inputType='submit'
+                    id='login-submit'
+                    />
+            </FormSection>
+        </FormWrapper>
+    )
+}
+
+export function FormNewAnimal() {
     return (
         <FormWrapper>
             <FormSection title='dados iniciais'>
@@ -36,7 +69,7 @@ function FormNewAnimal() {
     );
 }
 
-function FormNewFarm() {
+export function FormNewFarm() {
     return (
         <FormWrapper>
             <FormSection title='nova fazenda'>
@@ -47,5 +80,3 @@ function FormNewFarm() {
         </FormWrapper>
     );
 }
-
-export { FormNewAnimal, FormNewFarm };

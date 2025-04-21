@@ -5,13 +5,15 @@
 // colors
 $color-primary:         #ff4e4e;
 $color-primary-hover:   #ff7b7b;
+$color-primary-light:   #ffcdcd;
 $color-secondary:       #5c5c5c;
 $color-secondary-hover: #565555;
-$color-light:           #d0d0d0;
-$color-lighter:         #ececec;
+$color-light:           #e1e1e1;
+$color-lighter:         #F2F4F5;
 $color-dark:            #444;
 $color-darker:          #222;
 $color-shadow:          rgba(0, 0, 0, 0.200);
+$color-border: #E0E2E6;
 
 $color-input-background:  white;
 $color-input-placeholder: #9c9c9c;
@@ -22,7 +24,7 @@ $label-margin: 0 0 .8rem 0;
 // input
 $input-padding: .8rem;
 $input-height: 3.6rem;
-$input-width: 30rem;
+$input-width: 28rem;
 
 // textarea
 $textarea-height: calc($input-height*4);
@@ -42,7 +44,7 @@ $mobile-navbar-height: 7rem;
 
 // font-size and font-weight
 $fontsize-h1:      4.8rem;
-$fontsize-h2:      3.6rem;
+$fontsize-h2:      3.2rem;
 $fontsize-h3:      2.2rem;
 $fontsize-h4:      1.6rem;
 $fontsize-h5:      1.6rem;
@@ -57,6 +59,14 @@ $fontweight-h5:    500;
 $fontweight-p:     500;
 $fontweight-label: 500;
 $fontweight-input: 500;
+
+// wrapper-flex
+$wrapper-flex-padding:       2rem;
+$wrapper-flex-border-radius: 2rem;
+
+// sections
+$section-title-padding : 2rem;
+$section-content-padding : 2rem;
 
 p, h1, h2, h3, h4, h5, i {
     color: $color-darker;
@@ -131,8 +141,6 @@ button {
     color: white;
     font-size: $fontsize-input;
     font-weight: $fontweight-input;
-    
-    background-color: $color-secondary;
     box-shadow: 0 0 .4rem $color-shadow;
 
     &:hover {
@@ -148,13 +156,19 @@ button {
 }
 
 main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
     width: calc(100vw - $desktop-navbar-width);
     margin-left: $desktop-navbar-width;
+
+    background-color: $color-light;
     margin-bottom: 0;
 }
 
 section {
-
     &.section-list {
         display: flex;
         flex-direction: column;
@@ -184,6 +198,7 @@ div {
 
 @media screen and (max-width: 600px) {
     main {
+        min-height: calc(100vh - $mobile-navbar-height);
         width: 100vw;
         margin-left: 0;
         margin-bottom: $mobile-navbar-height;
